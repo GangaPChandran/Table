@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">TABLE</div> 
+        <table id="myTable" width="350px">
+            <tr>
+                <th>Sl no</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>City</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ganga</td>
+                <td>P Chandran</td>
+                <td>Thiruvalla</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Anliya</td>
+                <td>Manoj</td>
+                <td>Palakkad</td>
+                <td>India</td>
+            </tr>
+        </table>
+        <div id="#buttons">
+        <button class="button" onclick="myFunction1()">
+            Add a row to the bottom
+        </button> 
+        <button class="button" onclick="myFunction2()">
+            Add a row at the top    
+        </button>
+        </div> 
+        <br><br><br>
+        <script>
+             function myFunction1() {
+              var table = document.getElementById("myTable");
+              var slno =  document.getElementById("slno").value;
+              var fname =  document.getElementById("fname").value;
+              var lname =  document.getElementById("lname").value;
+              var city =  document.getElementById("city").value;
+              var country =  document.getElementById("country").value;
+              var row   = table.insertRow(3);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              var cell4 = row.insertCell(3);
+              var cell5 = row.insertCell(4);
+              cell1.innerHTML = slno;
+              cell2.innerHTML = fname;
+              cell3.innerHTML = lname;
+              cell4.innerHTML = city;
+              cell5.innerHTML = country;
+            }
+            function myFunction2() {
+              var table = document.getElementById("myTable");
+              var slno =  document.getElementById("slno").value;
+              var fname =  document.getElementById("fname").value;
+              var lname =  document.getElementById("lname").value;
+              var city =  document.getElementById("city").value;
+              var country =  document.getElementById("country").value;
+              var row   = table.insertRow(1);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              var cell4 = row.insertCell(3);
+              var cell5 = row.insertCell(4);
+              cell1.innerHTML = slno;
+              cell2.innerHTML = fname;
+              cell3.innerHTML = lname;
+              cell4.innerHTML = city;
+              cell5.innerHTML = country;
+            }
+            </script>
+                Sl No:&emsp; <input type="text" id="slno"/><br/><br/>
+                First Name:&emsp;<input type="text" id="fname"/><br/><br/>
+                Last Name:&emsp;<input type="text" id="lname"/><br/><br/>
+                City:&emsp;<input type="text" id="city"/><br/><br/>
+                Country:&emsp;<input type="text" id="country"/><br/><br/>
+        </div>
+</body>
+</html>
